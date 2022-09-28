@@ -21,3 +21,13 @@ email.addEventListener("focusout", () => {
         error.value = "";
     }
 });
+
+const tel = document.querySelector('#tel');
+tel.addEventListener("focusout", () => {
+    let telRegex = RegExp('^[1-9]{1}[0-9]?[ ][1-9]{1}[0-9]{9}$');
+    const telError = document.querySelector('.tel-error');
+    if(!telRegex.test(tel.value))
+        telError.textContent = "Phone number is Incorrect";
+    else 
+        telError.textContent = "";
+});
