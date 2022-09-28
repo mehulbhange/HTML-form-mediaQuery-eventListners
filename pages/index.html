@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>HTML5 CSS JS</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+<body>
+    <form>
+        <header class="headerContainer"><h1>HTML 5 Form Input Fields</h1></header>
+          <div>
+              <label for="text">text input type for Name: </label>
+              <input type="text" id="name" name="text" required>
+              <output class="text-error" for="text" id="nameError"></output>
+          </div>
+          <div>
+              <label for="pwd">password input type: </label>
+              <input type="password" id="pwd" name="pwd" required>
+              <error-output class='pwd-error' for="password"></error-output>
+            </div>
+          <div>
+              <label for="email">email input type: </label>
+              <input type="email" id="email" name="email">
+              <error-output class = "email-error" for = "email"></error-output>
+            </div>
+          <div>
+              <label for="url">url input type: </label>
+              <input type="url" id="url" name="url" required>
+          </div>
+          <div> 
+              <label for="number">number input type: </label>
+              <input type="number" id="number" name="number" required>
+          </div>
+          <div>
+              <label for="tel">tel input type:</label>
+              <input type="tel" id="tel" name="tel" required>  
+              <error-output class ="tel-error" for ="tel"></error-output>
+            </div>
+          <div>
+              <label for="search">search input type: </label>
+              <input type="search" id="search" name="search" required>   
+          </div>
+          <div class="nativeDateTimePiker">
+              <label for="startDate">Choose a date and time:</label>
+              <input type="datetime-local" id="startDate" name="startDate">
+              <span class="validity"></span>
+          </div>
+          <div>
+              <label for="salary">Choose your salary: </label>
+              <input type="range" id="salary" name="salary" min="300000"
+                max="500000" step="100" value="300000">
+              <output class="salary-output" for="salary">400000</output>
+          </div>
+          <div>
+            <button>Submit</button>
+          </div>
+        </form>
+
+        <script src="../js/script.js"></script>
+</body>
+</html>
