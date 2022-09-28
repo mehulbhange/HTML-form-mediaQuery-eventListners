@@ -17,8 +17,18 @@
           <div>
               <label for="pwd">password input type: </label>
               <input type="password" id="pwd" name="pwd" required>
-              <error-output class="error-output pwd-error" for="password"></error-output>
-            </div>
+              <!-- <error-output class="error-output pwd-error" for="password"></error-output> -->     
+          </div>
+          <div style="margin-left: 30%; display: none;" class="pass-hint" id="pass-rules" visibility="hidden">
+            <span>
+              <ul>
+                <li class="rule1" style="color: red;">minimum 8 Characters</li>
+                <li class="rule2" style="color: red;">Should have at least 1 Upper Case</li>
+                <li class="rule3" style="color: red;">Should have at least 1 numeric number in the password</li>
+                <li class="rule4" style="color: red;">Has exactly 1 Special Character</li>
+              </ul>
+            </span>
+          </div> 
           <div>
               <label for="email">email input type: </label>
               <input type="email" id="email" name="email">

@@ -31,3 +31,51 @@ tel.addEventListener("focusout", () => {
     else 
         telError.textContent = "";
 });
+
+
+const passwordInput = document.querySelector("#pwd");
+passwordInput.addEventListener("focus", () =>{
+    let rules = document.getElementById("pass-rules");
+    rules.style.display = "block";
+});
+
+passwordInput.addEventListener("input", () =>{
+    //let passwordRegex = RegExp("^(?=.*\\d)(?=.*[A-Z])(?=.*\\W)(?!.*\\W\\w*\\W)(?!.*\\s).{8,}$");
+    let pass = document.querySelector("#pwd").value;
+    let rule1 = document.querySelector(".rule1");
+    let rule2 = document.querySelector(".rule2");
+    let rule3 = document.querySelector(".rule3");
+    let rule4 = document.querySelector(".rule4");
+    let regexRule2 = RegExp("^(.*[A-Z].*)$");
+    let regexRule3 = RegExp("^(.*[0-9].*)$");
+    let regexRule4 = RegExp("^(?=.*?[0-9a-zA-Z])[0-9a-zA-Z]*[@#$%^&*][0-9a-zA-Z]*$");
+    
+    if(pass.length >= 8){
+        rule1.style.color = "green";
+    }else{
+        rule1.style.color = "red";
+    }
+    
+    if(regexRule2.test(pass)){
+        rule2.style.color = "green";
+    }else{
+        rule2.style.color = "red";
+    }
+    
+    if(regexRule3.test(pass)){
+        rule3.style.color = "green";    
+    }else{
+        rule3.style.color = "red";
+    }
+
+    if(regexRule4.test(pass)){
+        rule4.style.color ="green";
+    }else{
+        rule4.style.color ="red";    
+    }
+});
+
+passwordInput.addEventListener("focusout", () =>{
+    let rules = document.getElementById("pass-rules");
+    rules.style.display = "none";
+});
